@@ -109,8 +109,9 @@ var SnackbarItem = function (_Component) {
                 preventDuplicate = _props.preventDuplicate,
                 iconVariant = _props.iconVariant,
                 snack = _props.snack,
+                onExited = _props.onExited,
                 dense = _props.dense,
-                other = _objectWithoutProperties(_props, ['classes', 'action', 'ContentProps', 'hideIconVariant', 'preventDuplicate', 'iconVariant', 'snack', 'dense']);
+                other = _objectWithoutProperties(_props, ['classes', 'action', 'ContentProps', 'hideIconVariant', 'preventDuplicate', 'iconVariant', 'snack', 'onExited', 'dense']);
 
             var contentAction = ContentProps.action,
                 className = ContentProps.className,

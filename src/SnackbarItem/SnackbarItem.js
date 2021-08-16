@@ -45,6 +45,7 @@ class SnackbarItem extends Component {
             preventDuplicate,
             iconVariant,
             snack,
+            onExited,
             dense,
             ...other
         } = this.props;
