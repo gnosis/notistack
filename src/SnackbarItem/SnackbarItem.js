@@ -8,7 +8,6 @@ import SnackbarContent from '@material-ui/core/SnackbarContent';
 import { capitalise, getTransitionDirection, getSnackbarClasses, getCollapseClasses } from './SnackbarItem.util';
 import styles from './SnackbarItem.styles';
 
-
 class SnackbarItem extends Component {
     state = {
         collapsed: true,
@@ -18,14 +17,14 @@ class SnackbarItem extends Component {
         clearTimeout(this.timeout);
     }
 
-    handleClose = key => (event, reason) => {
+    handleClose = (key) => (event, reason) => {
         const { onClose, snack: { onClose: singleOnClose } } = this.props;
         if (reason === 'clickaway') return;
         if (singleOnClose) singleOnClose(event, reason, key);
         onClose(event, reason, key);
     };
 
-    handleExited = key => (event) => {
+    handleExited = (key) => (event) => {
         const { onExited, snack: { onExited: singleOnExited } } = this.props;
         if (singleOnExited) singleOnExited(event, key);
         onExited(event, key);
@@ -88,7 +87,9 @@ class SnackbarItem extends Component {
                 timeout={175}
                 in={this.state.collapsed}
                 classes={getCollapseClasses(classes, dense)}
-                onExited={this.handleExited(key)}
+                TransitionProps={{
+                    onExited: this.handleExited(key),
+                }}
             >
                 <Snackbar
                     TransitionProps={{
