@@ -152,9 +152,7 @@ var SnackbarItem = function (_Component) {
                     timeout: 175,
                     'in': this.state.collapsed,
                     classes: (0, _SnackbarItem.getCollapseClasses)(classes, dense),
-                    TransitionProps: {
-                        onExited: this.handleExited(key)
-                    }
+                    onExited: this.handleExited(key)
                 },
                 _react2.default.createElement(
                     _Snackbar2.default,

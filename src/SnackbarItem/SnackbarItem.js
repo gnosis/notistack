@@ -88,9 +88,7 @@ class SnackbarItem extends Component {
                 timeout={175}
                 in={this.state.collapsed}
                 classes={getCollapseClasses(classes, dense)}
-                TransitionProps={{
-                    onExited: this.handleExited(key),
-                }}
+                onExited={this.handleExited(key)}
             >
                 <Snackbar
                     TransitionProps={{
