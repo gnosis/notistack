@@ -49,6 +49,6 @@ export const getSnackbarClasses = (classes) => {
 };
 
 export const getCollapseClasses = (classes, dense) => ({
-    container: classes.collapseContainer,
+    root: classes.collapseContainer,
     wrapper: classNames(classes.collapseWrapper, { [classes.collapseWrapperDense]: dense }),
 });

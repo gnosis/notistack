@@ -65,7 +65,7 @@ var getSnackbarClasses = exports.getSnackbarClasses = function getSnackbarClasse
 
 var getCollapseClasses = exports.getCollapseClasses = function getCollapseClasses(classes, dense) {
     return {
-        container: classes.collapseContainer,
+        root: classes.collapseContainer,
         wrapper: (0, _classnames2.default)(classes.collapseWrapper, _defineProperty({}, classes.collapseWrapperDense, dense))
     };
 };
